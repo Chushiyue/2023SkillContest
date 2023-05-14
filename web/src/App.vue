@@ -7,7 +7,10 @@
 </template>
 
 <style>
-
+body {
+    background-image: url("@/assets/OrteliusWorldMap1570.jpg");
+    background-size: cover;
+}
 </style>
 <script>
 import $ from 'jquery';
@@ -23,8 +26,8 @@ export default {
             type: "get",
             success: resp => {
                 console.log(resp);
-                bot_name.value = resp.bot_name;
-                bot_rating.value = resp.bot_rating;
+                bot_name.value = resp.name;
+                bot_rating.value = resp.rating;
             }
         });
 
